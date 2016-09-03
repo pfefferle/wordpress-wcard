@@ -1,0 +1,154 @@
+@CHARSET "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300italic,300);
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font/fontawesome-webfont.eot');
+  src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('font/fontawesome-webfont.woff') format('woff'),
+       url('font/fontawesome-webfont.ttf') format('truetype'),
+       url('font/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'),
+       url('font/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { margin:0; padding:0; }
+
+img { border:none; }
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+  background-color: #000;
+  font-weight: 400;
+  height: 100%;
+  font-size: 20px;
+}
+
+main {
+  width: 500px;
+  margin: 0px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.avatar {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+  float: right;
+}
+
+a {
+  color: #eee;
+}
+
+h1 {
+  font-size: 14px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+h1 .fn {
+  font-size: 26px;
+  line-height: 49px !important;
+  font-weight: 400;
+}
+
+#profile, #slidecaption {
+  width: auto;
+  background-color: #fff;
+  background: none repeat scroll 0 0 rgba(10, 10, 10, 0.9);
+  padding: 10px 20px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#slidecaption {
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+#profile {
+  padding-top: 20px;
+}
+
+a img {
+  border: none;
+}
+
+abbr {
+  cursor: help;
+  border-bottom: 1px dashed #555;
+}
+
+cite {
+  font-style: normal;
+}
+
+data {
+  font-style: italic;
+}
+
+p {
+  padding: 10px 0px;
+}
+
+abbr.skill {
+  text-decoration: none;
+  border: 0 none;
+  cursor: default;
+}
+
+@media
+  only screen and (max-width: 600px) {
+		main {
+  	  width: auto;
+      margin-right: 25px;
+      margin-bottom: 25px;
+      top: 25px;
+      left: 25px;
+  	}
+}
+
+#supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(img/progress.gif) no-repeat center center;}
+
+#supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+#supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
+#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
+
+#supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
+#supersized a { width:100%; height:100%; display:block; }
+#supersized li.prevslide { z-index:-20; }
+#supersized li.activeslide { z-index:-10; }
+#supersized li.image-loading { background:#111 url(img/progress.gif) no-repeat center center; width:100%; height:100%; }
+#supersized li.image-loading img{ visibility:hidden; }
+#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+
+#prevslide, #nextslide{ position:fixed; height:43px; width:43px; top:50%; margin-top:-21px; opacity:0.6; }
+#prevslide{ left:10px; background:url('img/back.png'); }
+#nextslide{ right:10px; background:url('img/forward.png'); }
+#prevslide:active, #nextslide:active{ margin-top:-19px; }
+#prevslide:hover, #nextslide:hover{ cursor:pointer; }
+
+ul#slide-list{ padding:15px 0; float:left; position:absolute; left:50%; }
+ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+ul#slide-list li a{ display:block; width:12px; height:12px; background:url('img/nav-dot.png') no-repeat 0 -24px; }
+ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
+
+#tray-button{ float:right; margin-top:1px; border-left:1px solid #333; background:url('img/bg-hover.png') repeat-x 0 44px; }
+#tray-button:hover{ background-position:0 1px; cursor:pointer; }
+
+
+/* Progress Bar
+----------------------------*/
+#progress-back { z-index:5; position:fixed; bottom:0px; left:0; height:8px; width:100%; background:url('img/progress-back.png') repeat-x; }
+#progress-bar { position:fixed; height:8px; bottom:0px; width:100%; background:url('img/progress-bar.png') repeat-x; }
