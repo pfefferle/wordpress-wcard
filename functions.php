@@ -13,45 +13,45 @@ if ( ! function_exists( 'pfefferle_setup' ) ):
  */
 function pfefferle_setup() {
 
-  /**
-   * Make theme available for translation
-   * Translations can be filed in the /languages/ directory
-   * If you're building a theme based on sempress, use a find and replace
-   * to change 'sempress' to the name of your theme in all the template files
-   */
-  load_theme_textdomain( 'pfefferle', get_template_directory() . '/languages' );
+	/**
+	 * Make theme available for translation
+	 * Translations can be filed in the /languages/ directory
+	 * If you're building a theme based on sempress, use a find and replace
+	 * to change 'sempress' to the name of your theme in all the template files
+	 */
+	load_theme_textdomain( 'pfefferle', get_template_directory() . '/languages' );
 
-  // Add default posts and comments RSS feed links to head
-  //add_theme_support( 'automatic-feed-links' );
+	// Add default posts and comments RSS feed links to head
+	//add_theme_support( 'automatic-feed-links' );
 
-  // This theme uses post thumbnails
-  add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 1500, 1000 ); // Unlimited height, soft crop
+	// This theme uses post thumbnails
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 1500, 1000 ); // Unlimited height, soft crop
 
-  // Register custom image size for image post formats.
-  add_image_size( 'pfefferle-image-post', 1500, 1000 );
+	// Register custom image size for image post formats.
+	add_image_size( 'pfefferle-image-post', 1500, 1000 );
 
-  // Switches default core markup for search form to output valid HTML5.
-  add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+	// Switches default core markup for search form to output valid HTML5.
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
-  // This theme uses wp_nav_menu() in one location.
-  register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'sempress' ),
-  ) );
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'sempress' ),
+	) );
 
-  // Add support for the Aside, Gallery Post Formats...
-  //add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'status', 'image', 'video', 'audio', 'quote' ) );
-  //add_theme_support( 'structured-post-formats', array( 'image', 'video', 'audio', 'quote' ) );
+	// Add support for the Aside, Gallery Post Formats...
+	//add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'status', 'image', 'video', 'audio', 'quote' ) );
+	//add_theme_support( 'structured-post-formats', array( 'image', 'video', 'audio', 'quote' ) );
 
-  /**
-   * This theme supports jetpacks "infinite-scroll"
-   *
-   * @see http://jetpack.me/support/infinite-scroll/
-   */
-  //add_theme_support( 'infinite-scroll', array('container' => 'content', 'footer' => 'colophon') );
+	/**
+	 * This theme supports jetpacks "infinite-scroll"
+	 *
+	 * @see http://jetpack.me/support/infinite-scroll/
+	 */
+	//add_theme_support( 'infinite-scroll', array('container' => 'content', 'footer' => 'colophon') );
 
-  // This theme uses its own gallery styles.
-  //add_filter( 'use_default_gallery_style', '__return_false' );
+	// This theme uses its own gallery styles.
+	//add_filter( 'use_default_gallery_style', '__return_false' );
 }
 endif; // sempress_setup
 
@@ -101,22 +101,22 @@ if ( ! function_exists( 'pfefferle_enqueue_scripts' ) ) :
  * @since SemPress 1.1.1
  */
 function pfefferle_enqueue_scripts() {
-  // Add HTML5 support to older versions of IE
-  if ( isset( $_SERVER['HTTP_USER_AGENT'] ) &&
-     ( false !== strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE' ) ) &&
-     ( false === strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 9' ) ) ) {
+	// Add HTML5 support to older versions of IE
+	if ( isset( $_SERVER['HTTP_USER_AGENT'] ) &&
+		 ( false !== strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE' ) ) &&
+		 ( false === strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 9' ) ) ) {
 
-    wp_enqueue_script('html5', get_template_directory_uri() . '/js/html5.js', false, '3.6');
-  }
+		wp_enqueue_script('html5', get_template_directory_uri() . '/js/html5.js', false, '3.6');
+	}
 
-  wp_enqueue_script('supersized', get_template_directory_uri() . '/js/supersized.3.2.7.min.js', array("jquery"), '3.2.7');
-  wp_enqueue_script('supersized-shutter', get_template_directory_uri() . '/js/supersized.shutter.min.js', array("jquery", "supersized"), '3.2.7');
+	wp_enqueue_script('supersized', get_template_directory_uri() . '/js/supersized.3.2.7.min.js', array("jquery"), '3.2.7');
+	wp_enqueue_script('supersized-shutter', get_template_directory_uri() . '/js/supersized.shutter.min.js', array("jquery", "supersized"), '3.2.7');
 
-  // Loads our main stylesheet.
-  wp_enqueue_style( 'pfefferle-style', get_stylesheet_uri() );
+	// Loads our main stylesheet.
+	wp_enqueue_style( 'pfefferle-style', get_stylesheet_uri() );
 
-  ?>
-  <?php
+	?>
+	<?php
 }
 endif;
 
@@ -156,7 +156,7 @@ add_action( 'edit_user_profile_update', 'pfefferle_save_extra_profile_fields' );
  * @since SemPress 1.0.0
  */
 function pfefferle_get_avatar( $tag ) {
-  // Adds a class for microformats v2
-  return preg_replace('/(class\s*=\s*[\"|\'])/i', '${1}u-photo ', $tag);
+	// Adds a class for microformats v2
+	return preg_replace('/(class\s*=\s*[\"|\'])/i', '${1}u-photo ', $tag);
 }
 add_filter( 'get_avatar', 'pfefferle_get_avatar' );

@@ -1,17 +1,30 @@
+/**
+ * Theme Name: Pfefferle
+ * Theme URI: https://github.com/pfefferle/SemPress
+ * Author: Matthias Pfefferle
+ * Author URI: http://pfefferle.org/
+ * Description: My Theme
+ * Version: 1.0.0
+ * License: GNU General Public License Version 3
+ * License URI: http://www.gnu.org/licenses/gpl.html
+ * Tags: custom-menu, custom-colors, custom-header, custom-background, custom-logo, sticky-post, microformats, rtl-language-support, translation-ready, full-width-template, post-formats, threaded-comments, responsive-layout, fluid-layout, right-sidebar, theme-options, two-columns, one-column, editor-style, featured-images, blog, news
+ * Text Domain: pfefferle
+ */
+
 @CHARSET "UTF-8";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300italic,300);
 
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('font/fontawesome-webfont.eot');
-  src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('font/fontawesome-webfont.woff') format('woff'),
-       url('font/fontawesome-webfont.ttf') format('truetype'),
-       url('font/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'),
-       url('font/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'FontAwesome';
+	src: url('font/fontawesome-webfont.eot');
+	src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('font/fontawesome-webfont.woff') format('woff'),
+			 url('font/fontawesome-webfont.ttf') format('truetype'),
+			 url('font/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'),
+			 url('font/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * { margin:0; padding:0; }
@@ -19,102 +32,102 @@
 img { border:none; }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  color: #fff;
-  margin: 0px;
-  padding: 0px;
-  background-color: #000;
-  font-weight: 400;
-  height: 100%;
-  font-size: 20px;
+	font-family: 'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color: #fff;
+	margin: 0px;
+	padding: 0px;
+	background-color: #000;
+	font-weight: 400;
+	height: 100%;
+	font-size: 20px;
 }
 
 main {
-  width: 500px;
-  margin: 0px;
-  position: absolute;
-  top: 50px;
-  left: 50px;
+	width: 500px;
+	margin: 0px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
 }
 
 .avatar {
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  border-radius: 500px;
-  float: right;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+	float: right;
 }
 
 a {
-  color: #eee;
+	color: #eee;
 }
 
 h1 {
-  font-size: 14px;
-  padding-bottom: 10px;
-  font-weight: 300;
+	font-size: 14px;
+	padding-bottom: 10px;
+	font-weight: 300;
 }
 
 h1 .fn {
-  font-size: 26px;
-  line-height: 49px !important;
-  font-weight: 400;
+	font-size: 26px;
+	line-height: 49px !important;
+	font-weight: 400;
 }
 
 #profile, #slidecaption {
-  width: auto;
-  background-color: #fff;
-  background: none repeat scroll 0 0 rgba(10, 10, 10, 0.9);
-  padding: 10px 20px;
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	width: auto;
+	background-color: #fff;
+	background: none repeat scroll 0 0 rgba(10, 10, 10, 0.9);
+	padding: 10px 20px;
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #slidecaption {
-  margin-top: 50px;
-  font-size: 14px;
+	margin-top: 50px;
+	font-size: 14px;
 }
 
 #profile {
-  padding-top: 20px;
+	padding-top: 20px;
 }
 
 a img {
-  border: none;
+	border: none;
 }
 
 abbr {
-  cursor: help;
-  border-bottom: 1px dashed #555;
+	cursor: help;
+	border-bottom: 1px dashed #555;
 }
 
 cite {
-  font-style: normal;
+	font-style: normal;
 }
 
 data {
-  font-style: italic;
+	font-style: italic;
 }
 
 p {
-  padding: 10px 0px;
+	padding: 10px 0px;
 }
 
 abbr.skill {
-  text-decoration: none;
-  border: 0 none;
-  cursor: default;
+	text-decoration: none;
+	border: 0 none;
+	cursor: default;
 }
 
 @media
-  only screen and (max-width: 600px) {
+	only screen and (max-width: 600px) {
 		main {
-  	  width: auto;
-      margin-right: 25px;
-      margin-bottom: 25px;
-      top: 25px;
-      left: 25px;
-  	}
+			width: auto;
+			margin-right: 25px;
+			margin-bottom: 25px;
+			top: 25px;
+			left: 25px;
+		}
 }
 
 #supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(img/progress.gif) no-repeat center center;}

@@ -36,4 +36,4 @@
 <div id="page">
 <?php do_action( 'before' ); ?>
 
-  <main>
+	<main>
