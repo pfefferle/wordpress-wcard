@@ -4,8 +4,8 @@
  *
  * Contains the closing of the id=main div and all content after
  *
- * @package pfefferle
- * @since pfefferle 1.0.0
+ * @package wCard
+ * @since wCard 1.0.0
  */
 ?>
 

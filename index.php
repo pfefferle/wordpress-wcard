@@ -8,13 +8,13 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package SemPress
- * @since SemPress 1.0.0
+ * @package wCard
+ * @since wCard 1.0.0
  */
 
 get_header();
 
-$user = get_user_by( 'slug', 'pfefferle' );
+$user = get_user_by( 'slug', 'wcard' );
 ?>
 
 <div class="author contact vcard hcard h-card"

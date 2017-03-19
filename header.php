@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package pfefferle
- * @since pfefferle 1.0.0
+ * @package wCard
+ * @since wCard 1.0.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -23,11 +23,9 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://microformats.org/profile/specs" />
 <link rel="profile" href="http://microformats.org/profile/hatom" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="me" href="https://plus.google.com/+MatthiasPfefferle/" />
 
 <?php wp_head(); ?>
 </head>

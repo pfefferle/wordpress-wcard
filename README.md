@@ -1,2 +1,3 @@
-# wordpress-pfefferle
-The theme of pfefferle.org
+# wCard
+
+The WordPress theme of pfefferle.org
